@@ -32,7 +32,7 @@
                                 <tr t-foreach="o.invoice_line_ids" t-as="line">
                                     <td style="width:3cm"><span t-esc="line.quantity"/></td>
                                     <td><span t-esc="line.name"/></td>
-									<td style="position: absolute; left: 18cm"><span t-esc="line.price_total"/></td>
+									<td style="position: absolute; left: 16cm"><span t-esc="line.price_total"/></td>
                                 </tr>
                             </table>
                       </div>
