@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+            id="crea_factura"
+            string="Factura crea"
+            model="account.move"
+            report_type="qweb-pdf"
+            file="crea.factura"
+            name="crea.factura"
+        />
+
+    </data>
+</odoo>

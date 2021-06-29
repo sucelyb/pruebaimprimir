@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="factura">
+        <t t-call="web.html_container">
+            <t t-set="data_report_margin_top" t-value="1"/>
+            <t t-set="data_report_header_spacing" t-value="1"/>
+            <t t-set="data_report_dpi" t-value="110"/>
+            <t t-foreach="docs" t-as="o">
+                <div class="article">
+                    <div class="page">
+                        <div style="font-size: 110%; position: absolute; top: 2cm; left: 3cm">
+                            <span t-esc="o.partner_id.name"/>
+                        </div>
+                        <div style="font-size: 110%; position: absolute; top: 3.5cm; left: 3cm">
+                            <span t-esc="o.partner_id.street"/> <span t-esc="o.partner_id.street2"/>
+                            <t t-if="o.partner_id.city">
+                                , <span t-esc="o.partner_id.city"/>
+                            </t>
+                            <t t-if="o.partner_id.country_id">
+                                , <span t-esc="o.partner_id.country_id.name"/>
+                            </t>
+                        </div>
+                        <div style="font-size: 110%; position: absolute; top: 2cm; left: 18cm">
+                            <span t-esc="o.invoice_date" t-options="{'widget': 'date'}"/>
+                        </div>
+                        <div style="font-size: 110%; position: absolute; top: 3.5cm; left: 18cm">
+                            <span t-esc="o.partner_id.vat"/>
+                        </div>
+
+                        <div style="font-size: 110%; position: absolute; top: 6cm; left: 3cm">
+                            <table>
+                                <tr t-foreach="o.invoice_line_ids" t-as="line">
+                                    <td style="width:3cm"><span t-esc="line.quantity"/></td>
+                                    <td><span t-esc="line.name"/></td>
+                                    <td><span t-esc="line.price_total"/></td>
+                                </tr>
+                            </table>
+                      </div>
+
+                      <div style="font-size: 110%; position: absolute; top: 10cm; left: 3cm;width:100%">
+                          <span t-esc="a_letras(o.amount_total)"/>
+                      </div>
+
+                      <div style="font-size: 110%; position: absolute; top: 10cm; left: 18cm;width:10cm">
+                          <span t-esc="o.amount_total"/>
+                      </div>
+
+                    </div>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
