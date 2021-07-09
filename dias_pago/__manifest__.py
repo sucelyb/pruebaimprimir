@@ -14,7 +14,7 @@
     'category': 'Uncategorized',
     'version': '0.1',
 
-    'depends': ['website_sale','base'],
+    "depends": ["website_sale"],
 
     'data': [
         'views/dias_pago_views.xml',
