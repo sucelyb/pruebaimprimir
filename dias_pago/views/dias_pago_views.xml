@@ -9,8 +9,9 @@
                 <xpath expr="//group[@name='product_template_images']" position="after">
                          <field name="dias_pago"/>
                 </xpath>
-        </record>
-       </field>
+             </field>       
+	   </record>
+       
     </data>
 </odoo>
 
