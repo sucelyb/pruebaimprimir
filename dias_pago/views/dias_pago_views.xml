@@ -2,7 +2,7 @@
 <odoo>
     <data>
 -     <record model="ir.ui.view" id="dias_pago_form_view">
-            <field name="name">dias_pago.website_sale.product.template.form</field>
+            <field name="name">product.template.product.form.inherit</field>
             <field name="model">product.template</field>
             <field name="inherit_id" ref="website_sale.product_template_form_view" />
             <field name="arch" type="xml">
