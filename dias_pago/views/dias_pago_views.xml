@@ -2,13 +2,13 @@
 <odoo>
     <data>
 -     <record model="ir.ui.view" id="view_dias_pago_product_template_form">
-            <field name="name">dias_pago.product.template.form</field>
+            <field name="name">dias_pago.website_sale.product.template.form</field>
             <field name="model">product.template</field>
             <field name="inherit_id" ref="website_sale.product_template_form_view" />
             <field name="arch" type="xml">
-			<field name="fiscal_position_id" position="after">
+			<xpath expr="//group[@name='product_template_images']" position="after">
                         <field name='dias_pago'/>
-            </field>
+            </xpath>
 			</field>
         </record>
     </data>
