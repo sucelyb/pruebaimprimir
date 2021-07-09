@@ -17,6 +17,6 @@
     'depends': ['website_sale','base'],
 
     'data': [
-        'views/account_move_views.xml',
+        'views/dias_pago_views.xml',
     ],
 }
