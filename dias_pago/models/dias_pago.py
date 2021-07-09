@@ -13,7 +13,7 @@ from odoo import models, fields, api, _
 from odoo.exceptions import UserError, ValidationError
 
 
-class ProductTemplateWebsiteDescription(models.Model):
+class productdiaspago(models.Model):
     _inherit = 'product.template'
 
     
