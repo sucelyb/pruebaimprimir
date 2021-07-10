@@ -9,7 +9,7 @@
             <xpath expr="//div[@id='product_details']" position="inside">
                 
                     <field name="tipo_pago"/>
-                             </field>
+                             
             </xpath>
         </record>
     </data>
