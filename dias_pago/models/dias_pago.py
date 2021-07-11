@@ -14,7 +14,7 @@ from odoo.exceptions import UserError, ValidationError
 
 
 class productdiaspago(models.Model):
-    _inherit = 'product.template'
+    _inherit = 'payment.transaction'
 
     
     tipo_pago = fields.Selection([('quincedias','15 dias'),('treintadias', '30 dias'), ('cuarentadias', '40 dias')],
