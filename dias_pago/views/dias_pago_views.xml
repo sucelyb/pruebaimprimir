@@ -9,7 +9,7 @@
                     <field name="tipo_pago"/>
                              
             </xpath>
-            </field>
+            
         </template>
     </data>
 </odoo>
