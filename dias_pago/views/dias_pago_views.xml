@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <odoo>
-    <data>
+    
 -     <template inherit_id="website_sale.product" id="dias_pago_form_view">
             
             <xpath expr="//div[@name='product_attributes_simple']" position="after">
@@ -11,6 +11,6 @@
             </xpath>
             
         </template>
-    </data>
+    
 </odoo>
 
