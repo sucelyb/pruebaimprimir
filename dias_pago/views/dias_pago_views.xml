@@ -3,7 +3,7 @@
     <data>
 -     <template inherit_id="website_sale.product" id="dias_pago_form_view">
             
-            <xpath expr="//div[@name='pricing']" position="after">
+            <xpath expr="//div[@name='product_attributes_simple']" position="after">
 
                 
                     <field name="tipo_pago"/>
