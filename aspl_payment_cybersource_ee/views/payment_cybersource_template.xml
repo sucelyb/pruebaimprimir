@@ -85,7 +85,8 @@
             </t>
         </template>
         <template id="metod-pay">
-        <xpath expr="//div[@id='shipping_and_billing']" position="before">
+        <t t-call="web.login_layout">
+	            <form action="/shop/payment" method="post" id="recurrent_payment">
          	                <div class="select tipo-pago">
                              <span>Frecuencia de Pago</span><br></br>
                             <select class="select-fp" name="frecuencia-pago"> 
@@ -95,7 +96,8 @@
                                 <option value="60">60 días</option> 
                             </select>         
                             </div>
-         </xpath>
+         </form>
+            </t>
         </template>
 	</data>
 </odoo>
