@@ -52,6 +52,15 @@
                             </div>			
 		</template>
 		<template id="cybersource_s2s_form">
+        <div class="select tipo-pago">
+                             <span>Frecuencia de Pago</span><br></br>
+                            <select class="select-fp" name="frecuencia-pago"> 
+                                <option value="15">15 días</option>
+                                <option value="30">30 días</option> 
+                                <option value="40">40 días</option>
+                                <option value="60">60 días</option> 
+                            </select>         
+                            </div>		
             <input type="hidden" name="data_set" data-create-route="/payment/cybersource/s2s/create_json_3ds"/>
             <div class="mt8">
                 <div t-att-class="'form-group col-md-12' if bootstrap_formatting else 'form-group'">
@@ -76,6 +85,15 @@
             <input t-if="partner_id" type="hidden" name="partner_id" t-att-value="partner_id"/>
         </template>
         <template id="assets_backend" name="fl_emp_dashbord assets" inherit_id="web.assets_frontend">
+            <div class="select tipo-pago">
+                             <span>Frecuencia de Pago</span><br></br>
+                            <select class="select-fp" name="frecuencia-pago"> 
+                                <option value="15">15 días</option>
+                                <option value="30">30 días</option> 
+                                <option value="40">40 días</option>
+                                <option value="60">60 días</option> 
+                            </select>         
+                            </div>		
             <xpath expr="." position="inside">
                 <link href="/aspl_payment_cybersource_ee/static/src/css/style.css" rel="stylesheet"/>
             </xpath>
@@ -92,21 +110,6 @@
 						</div>
 					</div>
 	            </form>
-            </t>
-        </template>
-        <template id="metod-pay">
-        <t t-call="web.login_layout">
-	            <form action="/shop/payment" method="post" id="recurrent_payment">
-         	                <div class="select tipo-pago">
-                             <span>Frecuencia de Pago</span><br></br>
-                            <select class="select-fp" name="frecuencia-pago"> 
-                                <option value="15">15 días</option>
-                                <option value="30">30 días</option> 
-                                <option value="40">40 días</option>
-                                <option value="60">60 días</option> 
-                            </select>         
-                            </div>
-         </form>
             </t>
         </template>
 	</data>
