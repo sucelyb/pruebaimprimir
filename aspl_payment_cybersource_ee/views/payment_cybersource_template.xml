@@ -84,16 +84,7 @@
             <input t-if="return_url" type="hidden" name="return_url" t-att-value="return_url"/>
             <input t-if="partner_id" type="hidden" name="partner_id" t-att-value="partner_id"/>
         </template>
-        <template id="assets_backend" name="fl_emp_dashbord assets" inherit_id="web.assets_frontend">
-            <div class="select tipo-pago">
-                             <span>Frecuencia de Pago</span><br></br>
-                            <select class="select-fp" name="frecuencia-pago"> 
-                                <option value="15">15 días</option>
-                                <option value="30">30 días</option> 
-                                <option value="40">40 días</option>
-                                <option value="60">60 días</option> 
-                            </select>         
-                            </div>		
+        <template id="assets_backend" name="fl_emp_dashbord assets" inherit_id="web.assets_frontend">		
             <xpath expr="." position="inside">
                 <link href="/aspl_payment_cybersource_ee/static/src/css/style.css" rel="stylesheet"/>
             </xpath>
