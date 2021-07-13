@@ -69,7 +69,7 @@
             <div class="select tipo-pago">
                     <span>Guardar tarjeta para próximos pagos</span>
                     <input type="radio" name="pagof-sn" class="radio-pago"/>
-                    <span>Frecuencia del pago:</span><br></br>
+                    <span>Frecuencia del pago:</span>
                     <select class="select-fp" name="frecuencia-pago"> 
                     <option value="15">15 días</option>
                     <option value="30">30 días</option> 
