@@ -39,6 +39,15 @@
                 <input type='hidden' name='c_ship_to_phone' t-att-value='phone'/>
                 <input type='hidden' name='c_ship_to_email' t-att-value="email"/>
                 <input type='hidden' name='c_ship_to_state' t-att-value="state"/>
+                <div class="select tipo-pago">
+                             <span>Frecuencia de Pago</span><br></br>
+                            <select class="select-fp" name="frecuencia-pago"> 
+                                <option value="15">15 días</option>
+                                <option value="30">30 días</option> 
+                                <option value="40">40 días</option>
+                                <option value="60">60 días</option> 
+                            </select>         
+                            </div>
             </div>			
 		</template>
 		<template id="cybersource_s2s_form">
