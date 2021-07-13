@@ -41,26 +41,9 @@
                 <input type='hidden' name='c_ship_to_state' t-att-value="state"/>
                 
             </div>
-            <div class="select tipo-pago">
-                             <span>Frecuencia de Pago</span><br></br>
-                            <select class="select-fp" name="frecuencia-pago"> 
-                                <option value="15">15 días</option>
-                                <option value="30">30 días</option> 
-                                <option value="40">40 días</option>
-                                <option value="60">60 días</option> 
-                            </select>         
-                            </div>			
+            		
 		</template>
-		<template id="cybersource_s2s_form">
-        <div class="select tipo-pago">
-                             <span>Frecuencia de Pago</span><br></br>
-                            <select class="select-fp" name="frecuencia-pago"> 
-                                <option value="15">15 días</option>
-                                <option value="30">30 días</option> 
-                                <option value="40">40 días</option>
-                                <option value="60">60 días</option> 
-                            </select>         
-                            </div>		
+		<template id="cybersource_s2s_form">		
             <input type="hidden" name="data_set" data-create-route="/payment/cybersource/s2s/create_json_3ds"/>
             <div class="mt8">
                 <div t-att-class="'form-group col-md-12' if bootstrap_formatting else 'form-group'">
@@ -83,6 +66,18 @@
             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
             <input t-if="return_url" type="hidden" name="return_url" t-att-value="return_url"/>
             <input t-if="partner_id" type="hidden" name="partner_id" t-att-value="partner_id"/>
+            <div class="select tipo-pago">
+                    <span>Guardar tarjeta para próximos pagos</span>
+                    <input type="radio" name="pagof-sn" class="radio-pago"/>
+                    <span>Frecuencia del pago:</span><br></br>
+                    <select class="select-fp" name="frecuencia-pago"> 
+                    <option value="15">15 días</option>
+                    <option value="30">30 días</option> 
+                    <option value="40">40 días</option>
+                    <option value="60">60 días</option> 
+                    </select>         
+            </div>
+        
         </template>
         <template id="assets_backend" name="fl_emp_dashbord assets" inherit_id="web.assets_frontend">		
             <xpath expr="." position="inside">
